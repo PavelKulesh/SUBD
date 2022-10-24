@@ -1,1 +1,3 @@
-ПАВЕЛ КУЛЕШ 053503
+# Project tщзшс: Online store
+---
+## Kulesh Pavel 053503
