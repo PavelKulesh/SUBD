@@ -1,3 +1,3 @@
-# Project tщзшс: Online store
+# Project topic: Online store
 ---
 ## Kulesh Pavel 053503
