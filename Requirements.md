@@ -15,7 +15,7 @@
 ---
 Database diagram:
 
-![alt text](Pictures/diagram.png)
+![alt text]()
 ---
 Database description:
 
