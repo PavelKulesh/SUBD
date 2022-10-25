@@ -15,7 +15,7 @@
 ---
 Database diagram:
 
-![alt text]()
+![alt text](Images/notnormalized.png)
 ---
 Database description:
 
