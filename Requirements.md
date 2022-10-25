@@ -12,6 +12,7 @@
    - delete reviews
    - add, delete and edit products
    - edit user info
+   - check log list
 ---
 Database diagram:
 
@@ -24,25 +25,25 @@ Database description:
 - User - all users
    - **IdUser** - uuid
    - IdRole - uuid(foreign key)
-   - Name - varchar(user name)
-   - LastName - varchar(user last name)
-   - PhoneNumber - varchar(user phonenumber)
-   - Password - varchar(user password)
-   - Email - varchar(user email)
+   - Name - varchar(20)(user name)
+   - LastName - varchar(20)(user last name)
+   - PhoneNumber - varchar(20)(user phonenumber)
+   - Password - varchar(20)(user password)
+   - Email - varchar(30)(user email)
 
 - Role - roles for users
    - **IdRole** - uuid
-   - Name - varchar(role name)
+   - Name - varchar(20)(role name)
 
 - Log - user action logs
    - **IdUser** - uuid(foreign key)
    - Date - time(time of user action)
-   - Info - varchar(user action for log)
+   - Info - varchar(100)(user action for log)
 
 - Feedback - feedback of product
    - **IdFeedback** - uuid
    - IdProduct - uuid(foreign key)
-   - Text - varchar(product feedback text)
+   - Text - varchar(200)(product feedback text)
    - User - uuid(IdUser, one to one feedback user)
 
 - Rate - product rate
@@ -53,27 +54,27 @@ Database description:
 
 - Category - product category
    - **IdCategory** - uuid
-   - Name - varchar(category name)
+   - Name - varchar(30)(category name)
 
 - Product
    - **IdProduct** - uuid
    - IdCategory - uuid(foreign key)
-   - Title - varchar(product title)
-   - Description - varchar(product description)
-   - Specifications - varchar(product specifications)
+   - Title - varchar(50)(product title)
+   - Description - varchar(500)(product description)
+   - Specifications - varchar(500)(product specifications)
    - Cost - float(product cost)
-   - Images - varchar(product images path)
-   - Manufacturers - varchar(product manufacturers, many to many product manufacturer)
+   - Images - varchar(100)(product images path)
+   - Manufacturers - varchar(50)(product manufacturers, many to many product manufacturer)
    - is_available - bool(is the product available or not)
 
-- Cart
-   - **IdCart** - uuid
-   - Products - varchar(products inside cart)
+- Order
+   - **IdOrder** - uuid
+   - Products - varchar(100)(products inside cart)
    - User - uuid(IdUser, one to one cart user)
 
 - Manufacturer
    - **IdManufacturer** - uuid
-   - Name - varchar(manufacturer name)
-   - Country - varchar(manufacturer country)
-   - Products - varchar(manufacturers products)
+   - Name - varchar(50)(manufacturer name)
+   - Country - varchar(50)(manufacturer country)
+   - Products - varchar(100)(manufacturers products)
 ---
