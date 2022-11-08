@@ -69,6 +69,7 @@ Database description:
 - Order
    - **IdOrder** - uuid
    - User - uuid(IdUser, one to one cart user)
+   - Date - datetime(date and time of the order (blank = True))
 
 - Manufacturer
    - **IdManufacturer** - uuid
