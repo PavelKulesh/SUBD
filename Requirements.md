@@ -37,7 +37,7 @@ Database description:
 
 - Log - user action logs
    - **IdUser** - uuid(foreign key)
-   - Date - time(time of user action)
+   - Date - datetime(date and time of user action)
    - Info - varchar(100)(user action for log)
 
 - Feedback - feedback of product
@@ -49,7 +49,7 @@ Database description:
 - Rate - product rate
    - **IdRate** - uuid
    - IdProduct - uuid(foreign key)
-   - Value - int(product rate from 1 to 5)
+   - Value - tinyint(product rate from 1 to 5)
    - User - uuid(IdUser, one to one rate user)
 
 - Category - product category
