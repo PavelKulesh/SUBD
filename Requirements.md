@@ -64,19 +64,24 @@ Database description:
    - Specifications - varchar(500)(product specifications)
    - Cost - float(product cost)
    - Images - varchar(100)(product images path)
-   - Manufacturers - varchar(50)(product manufacturers, many to many product manufacturer)
    - is_available - bool(is the product available or not)
 
 - Order
    - **IdOrder** - uuid
-   - Products - varchar(100)(products inside cart)
    - User - uuid(IdUser, one to one cart user)
 
 - Manufacturer
    - **IdManufacturer** - uuid
    - Name - varchar(50)(manufacturer name)
    - Country - varchar(50)(manufacturer country)
-   - Products - varchar(100)(manufacturers products)
+
+- ManufacturerProduct - many-to-many table between Manufacturer and Product
+   - IdManufacturer - uuid(foreign key)
+   - IdProduct - uuid(foreign key)
+
+- ProductOrder - many-to-many table between Order and Product
+   - IdOrder - uuid(foreign key)
+   - IdProduct - uuid(foreign key)
 ---
 Normalized Database diagram:
 
