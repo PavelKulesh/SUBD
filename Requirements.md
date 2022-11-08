@@ -78,3 +78,7 @@ Database description:
    - Country - varchar(50)(manufacturer country)
    - Products - varchar(100)(manufacturers products)
 ---
+Normalized Database diagram:
+
+![alt text](Images/Normalized.png)
+---
