@@ -16,7 +16,7 @@
 ---
 Database diagram:
 
-![alt text](Images/diagram.png)
+![alt text](Images/iagram.png)
 ---
 Database description:
 
@@ -86,5 +86,5 @@ Database description:
 ---
 Normalized Database diagram:
 
-![alt text](Images/Normalized.png)
+![alt text](Images/ormalized.png)
 ---
